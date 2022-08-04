@@ -22,7 +22,7 @@ def predict_note_authentication():
 
     prediction = rf.predict([[variance,skewness,curtosis,entropy]])
 
-    return "The predicted value is "+ str(prediction)
+    return f"The predicted value is {str(prediction)}"
 
 
 
@@ -35,7 +35,7 @@ def predict_note_file():
     # curtosis = request.args.get('curtosis')
     # entropy = request.args.get('entropy')
     prediction = rf.predict(df_test)
-    return "The predicted value is "+ str(list(prediction))
+    return f"The predicted value is {list(prediction)}"
 
 
 
