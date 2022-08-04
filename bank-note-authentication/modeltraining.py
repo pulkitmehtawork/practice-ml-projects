@@ -15,9 +15,8 @@ y_pred = rf.predict(X_test)
 score = accuracy_score(y_test,y_pred)
 print(score)
 
-pickle_out = open('classifier.pkl','wb')
-pickle.dump(rf,pickle_out)
-pickle_out.close()
+with open('classifier.pkl','wb') as pickle_out:
+    pickle.dump(rf,pickle_out)
 
 
 
